@@ -1,9 +1,10 @@
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import * as React from "react";
 
 import Hero from "../src/components/Hero";
-import Products from "../src/components/Products";
 import Nav from "../src/components/navComponents/Nav";
+import Products from "../src/components/Products";
+import Technologies from "../src/components/Tech";
 
 export default function Index() {
   return (
@@ -22,6 +23,8 @@ export default function Index() {
       <Hero />
 
       <Products />
+
+      <Technologies />
     </Box>
   );
 }

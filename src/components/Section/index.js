@@ -21,9 +21,11 @@ const Section = ({ children, content, header }) => {
 
           <Box component="div" sx={styles.sectionDivider} />
 
-          <Typography variant={"h5"} sx={styles.sectionText}>
-            {content}
-          </Typography>
+          {content && (
+            <Typography variant={"h5"} sx={styles.sectionText}>
+              {content}
+            </Typography>
+          )}
 
           {children}
         </Box>

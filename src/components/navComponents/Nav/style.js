@@ -13,7 +13,7 @@ export const styles = {
     alignItems: "center",
     backgroundColor: "transparent",
     borderBottomColor: theme.palette.grays["300"],
-    borderBottomWidth: 1,
+    borderBottomWidth: 0,
     borderBottomStyle: "solid",
     display: "flex",
     [theme.breakpoints.only("xs")]: {

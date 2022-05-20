@@ -10,21 +10,18 @@ import { styles } from "./style";
 
 const TIMEOUT = 1000;
 
-const Products = () => {
+const Tech = () => {
   const [setRef, visible] = useInView({
     threshold: 0.3,
   });
 
   return (
-    <Box sx={styles.productsContainer}>
-      <Section
-        header={content.products.header}
-        content={content.products.content}
-      >
-        <Box sx={styles.productItems}>
-          {content.products.items.map((item, index) => {
+    <Box sx={styles.techContainer}>
+      <Section header={content.tech.header} content={content.tech.content}>
+        <Box sx={styles.techItems}>
+          {content.tech.items.map((item, index) => {
             return (
-              <Card data={item} key={index} imageSize="lg" width={"24%"} />
+              <Card data={item} key={index} imageSize="sm" width={"21%"} />
             );
           })}
         </Box>
@@ -33,4 +30,4 @@ const Products = () => {
   );
 };
 
-export default Products;
+export default Tech;

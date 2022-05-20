@@ -16,56 +16,41 @@ export const styles = {
     },
   },
   cardContainer: {
-    alignItems: "center",
+    alignItems: "flex-start",
     display: "flex",
     flexDirection: "column",
     height: "fit-content",
     justifyContent: "flex-start",
+    marginBottom: theme.spacing(8.5),
     overflow: "hidden",
     position: "relative",
-    width: { xs: "100%", sm: "24%" },
   },
   cardContent: {
     display: "flex",
     flexDirection: "column",
     height: "100%",
     justifyContent: "flex-start",
+    marginTop: theme.spacing(3),
   },
-  cardImage: {
-    backgroundPosition: "top",
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "contain",
-    height: "100%",
-    width: "100%",
-    [theme.breakpoints.only("xs")]: {
-      filter: "brightness(1) grayscale(0)",
-    },
+  cardImageLg: {
+    maxWidth: 280,
+    width: "90%",
   },
-  cardImageContainer: {
-    minHeight: 450,
-    width: "45%",
-    [theme.breakpoints.only("xs")]: {
-      height: 230,
-      minHeight: "inherit",
-      width: "100%",
-    },
+  cardImageSm: {
+    maxWidth: 80,
+    width: "30%",
   },
   cardText: {
     color: theme.palette.text.light,
     lineHeight: 1.5,
     marginBottom: theme.spacing(2),
     marginTop: theme.spacing(1),
-    [theme.breakpoints.only("xs")]: {
-      color: theme.palette.primary.contrastText,
-      marginBottom: theme.spacing(1),
-      fontSize: theme.typography.fontSize * 1.2,
-    },
   },
   cardHeader: {
     color: theme.palette.secondary.main,
     fontWeight: 700,
     lineHeight: 1.5,
-    marginBottom: theme.spacing(2.5),
+    marginBottom: theme.spacing(2),
   },
   grow: {
     flexGrow: 1,

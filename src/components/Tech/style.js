@@ -21,7 +21,7 @@ export const styles = {
     display: "flex",
     margin: theme.spacing(1),
   },
-  productItems: {
+  techItems: {
     alignItems: "flex-start",
     display: "flex",
     flexDirection: { xs: "column", sm: "row" },
@@ -33,7 +33,7 @@ export const styles = {
       minWidth: "80%",
     },
   },
-  productsContainer: {
+  techContainer: {
     alignItems: "start",
     display: "flex",
     justifyContent: "center",

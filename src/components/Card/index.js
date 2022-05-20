@@ -1,26 +1,30 @@
-import { Box, Button, Fade, Hidden, Slide, Typography } from "@mui/material";
+import { Box, Button, Fade, Typography } from "@mui/material";
+import Image from "next/image";
 import React from "react";
 
 import { useInView } from "../../utils/useInView";
 import { styles } from "./style";
 
-const Card = ({ data, index }) => {
+const Card = ({ data, imageSize, index, width }) => {
   const [setRef, visible] = useInView({
     threshold: 0.3,
   });
 
   return (
-    <Box key={index} ref={setRef} sx={styles.cardContainer}>
-      <Box sx={styles.cardImageContainer}>
+    <Box
+      key={index}
+      ref={setRef}
+      sx={{ ...styles.cardContainer, width: { xs: "100%", sm: width } }}
+    >
+      {data.image && (
         <Fade in={visible} timeout={1000}>
           <Box
-            sx={
-              ({ ...styles.cardImage },
-              { backgroundImage: `url(${data.image.url})` })
-            }
-          />
+            sx={imageSize === "lg" ? styles.cardImageLg : styles.cardImageSm}
+          >
+            <Image src={data.image} alt={"card_image"} />
+          </Box>
         </Fade>
-      </Box>
+      )}
 
       <Fade in={visible} timeout={2000}>
         <Box sx={styles.cardContent}>

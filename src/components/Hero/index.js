@@ -2,7 +2,6 @@ import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 import React from "react";
 
-import heroImage from "../../assets/images/dummy_image.png";
 import { content } from "../../utils/content";
 import { styles } from "./style";
 
@@ -20,7 +19,7 @@ const Hero = () => {
       </Box>
 
       <Box sx={styles.heroImageContainer}>
-        <Image src={heroImage} alt={"hero_image"} />
+        <Image src={content.hero.image} alt={"hero_image"} />
       </Box>
     </Box>
   );

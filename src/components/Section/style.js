@@ -48,12 +48,13 @@ export const styles = {
   sectionText: {
     color: theme.palette.secondary.main,
     lineHeight: 1.5,
-    marginBottom: theme.spacing(6),
-    marginTop: theme.spacing(6),
+    marginBottom: theme.spacing(0),
+    marginTop: theme.spacing(5),
   },
   sectionTitle: {
     color: theme.palette.secondary.main,
     fontWeight: 700,
+    letterSpacing: 1,
     lineHeight: 1.5,
     marginBottom: theme.spacing(2.5),
   },

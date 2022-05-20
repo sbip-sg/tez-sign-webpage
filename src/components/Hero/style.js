@@ -59,6 +59,7 @@ export const styles = {
   heroHead: {
     color: theme.palette.secondary.main,
     fontWeight: 700,
+    letterSpacing: 1,
     lineHeight: 1.2,
     marginBottom: theme.spacing(2.5),
     whiteSpace: "pre-line",

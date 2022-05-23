@@ -1,4 +1,4 @@
-import { bodyWidth, theme } from "../../utils/theme";
+import { theme } from "../../utils/theme";
 
 export const styles = {
   banner: {
@@ -21,16 +21,17 @@ export const styles = {
     display: "flex",
     margin: theme.spacing(1),
   },
-  techItems: {
+  teamItems: {
     alignItems: "flex-start",
     display: "flex",
     flexDirection: { xs: "column", sm: "row" },
     flexWrap: "wrap",
     justifyContent: "flex-start",
     marginTop: theme.spacing(7),
-    width: "100%",
+    width: "80%",
     [theme.breakpoints.only("xs")]: {
       minWidth: "80%",
+      width: "100%",
     },
   },
 };

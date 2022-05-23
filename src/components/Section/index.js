@@ -8,7 +8,7 @@ const TIMEOUT = 1000;
 
 const Section = ({ children, content, header }) => {
   const [setRef, visible] = useInView({
-    threshold: 0.3,
+    threshold: 0.1,
   });
 
   return (

@@ -7,14 +7,14 @@ import Section from "../Section";
 import { content } from "../../utils/content";
 import { styles } from "./style";
 
-const Tech = () => {
+const Team = () => {
 
   return (
-      <Section header={content.tech.header} content={content.tech.content}>
-        <Box sx={styles.techItems}>
-          {content.tech?.items.map((item, index) => {
+      <Section header={content.team.header} content={content.team.content}>
+        <Box sx={styles.teamItems}>
+          {content.team?.items.map((item, index) => {
             return (
-              <Card data={item} key={index} imageSize="sm" />
+              <Card data={item} key={index} imageSize="lg" />
             );
           })}
         </Box>
@@ -22,4 +22,4 @@ const Tech = () => {
   );
 };
 
-export default Tech;
+export default Team;

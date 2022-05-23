@@ -32,14 +32,5 @@ export const styles = {
     [theme.breakpoints.only("xs")]: {
       minWidth: "80%",
     },
-  },
-  productsContainer: {
-    alignItems: "start",
-    display: "flex",
-    justifyContent: "center",
-    maxWidth: bodyWidth.maxWidth,
-    overflow: "hidden",
-    position: "relative",
-    width: bodyWidth.width,
-  },
+  }
 };

@@ -5,7 +5,7 @@ import React from "react";
 import { useInView } from "../../utils/useInView";
 import { styles } from "./style";
 
-const Card = ({ data, imageSize, index, width }) => {
+const Card = ({ data, imageSize, index }) => {
   const [setRef, visible] = useInView({
     threshold: 0.3,
   });
@@ -14,7 +14,10 @@ const Card = ({ data, imageSize, index, width }) => {
     <Box
       key={index}
       ref={setRef}
-      sx={{ ...styles.cardContainer, width: { xs: "100%", sm: width } }}
+      sx={{
+        ...styles.cardContainer,
+        width: { xs: "100%", sm: imageSize === "lg" ? "24%" : "21%" },
+      }}
     >
       {data.image && (
         <Fade in={visible} timeout={1000}>

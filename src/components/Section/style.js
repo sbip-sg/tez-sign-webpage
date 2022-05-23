@@ -1,4 +1,4 @@
-import { appBar, bodyWidth, theme } from "../../utils/theme";
+import { bodyWidth, theme } from "../../utils/theme";
 
 export const styles = {
   banner: {
@@ -25,8 +25,6 @@ export const styles = {
     alignItems: "flex-start",
     display: "flex",
     flexDirection: "column",
-    marginBottom: theme.spacing(15),
-    marginTop: theme.spacing(15),
     width: "100%",
     zIndex: 1,
     [theme.breakpoints.only("xs")]: {
@@ -37,7 +35,12 @@ export const styles = {
     alignItems: "start",
     display: "flex",
     justifyContent: "center",
-    width: '100%',
+    marginBottom: { xs: theme.spacing(2), sm: theme.spacing(10) },
+    marginTop: { xs: theme.spacing(2), sm: theme.spacing(10) },
+    maxWidth: bodyWidth.maxWidth,
+    // overflow: "hidden",
+    position: "relative",
+    width: bodyWidth.width,
   },
   sectionDivider: {
     backgroundColor: theme.palette.primary.main,
@@ -56,6 +59,7 @@ export const styles = {
     fontWeight: 700,
     letterSpacing: 1,
     lineHeight: 1.5,
-    marginBottom: theme.spacing(2.5),
+    marginTop: theme.spacing(2.5),
+    marginBottom: theme.spacing(1),
   },
 };

@@ -12,6 +12,7 @@ export const theme = createTheme({
     background: {
       default: "#fefdfe",
       dark: "#0c121f",
+      glass: "rgba(255, 255, 255, 0.2)",
       //   default:'linear-gradient(280deg, rgba(11,18,27, 1) 0%, rgba(12,18,32, 1) 100%)'
     },
     primary: {

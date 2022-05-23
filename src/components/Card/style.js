@@ -22,6 +22,7 @@ export const styles = {
     height: "fit-content",
     justifyContent: "flex-start",
     marginBottom: theme.spacing(8.5),
+    marginRight: theme.spacing(2),
     overflow: "hidden",
     position: "relative",
   },

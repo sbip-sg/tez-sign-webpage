@@ -38,7 +38,7 @@ export const styles = {
     textDecoration: "none",
     transition: "all 0.5s ease-in-out",
     "&:hover": {
-      color: theme.palette.primary.main,
+      color: theme.palette.grays[400],
     },
     [theme.breakpoints.only("md")]: {
       marginLeft: theme.spacing(1),

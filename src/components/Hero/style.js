@@ -41,7 +41,8 @@ export const styles = {
     position: "relative",
     width: bodyWidth.width,
     [theme.breakpoints.only("xs")]: {
-      justifyContent: "center !important",
+      justifyContent: "flex-end !important",
+      marginBottom: theme.spacing(8),
       maxHeight: "inherit",
       maxWidth: bodyWidth.width,
       minWidth: bodyWidth.width,
@@ -49,10 +50,7 @@ export const styles = {
   },
   heroContent: {
     color: theme.palette.secondary.main,
-    fontSize: {
-      xs: theme.typography.fontSize * 1.1,
-      sm: theme.typography.fontSize * 1.6,
-    },
+    fontSize: theme.typography.fontSize * 1.6,
     lineHeight: 1.5,
     whiteSpace: "pre-line",
   },
@@ -64,7 +62,7 @@ export const styles = {
     marginBottom: theme.spacing(2.5),
     whiteSpace: "pre-line",
     [theme.breakpoints.only("xs")]: {
-      fontSize: theme.typography.fontSize * 3.8,
+      fontSize: theme.typography.fontSize * 3.5,
     },
   },
   heroImageContainer: {

@@ -16,20 +16,18 @@ const Products = () => {
   });
 
   return (
-    <Box sx={styles.productsContainer}>
       <Section
         header={content.products.header}
         content={content.products.content}
       >
         <Box sx={styles.productItems}>
-          {content.products.items.map((item, index) => {
+          {content.products?.items.map((item, index) => {
             return (
-              <Card data={item} key={index} imageSize="lg" width={"24%"} />
+              <Card data={item} key={index} imageSize="lg" />
             );
           })}
         </Box>
       </Section>
-    </Box>
   );
 };
 

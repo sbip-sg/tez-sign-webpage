@@ -1,3 +1,12 @@
+import {
+  RiFacebookCircleFill,
+  RiLinkedinBoxFill,
+  RiTwitterFill,
+} from "react-icons/ri";
+
+import dummy_profile_1 from "../assets/images/dummy_profile_1.png";
+import dummy_profile_2 from "../assets/images/dummy_profile_2.png";
+import dummy_profile_3 from "../assets/images/dummy_profile_3.png";
 import heroImage from "../assets/images/dummy_image.png";
 import mobile from "../assets/images/mobile.png";
 import platform from "../assets/images/platform.png";
@@ -93,5 +102,57 @@ export const content = {
           "You can upload the original copy of the document to the frontend, our platform will retrieve the actions history of this document, which are recorded in the immutable storages, either verifiable database or blockchain.",
       },
     ],
+  },
+  team: {
+    header: "Team",
+    content: "",
+    items: [
+      {
+        image: dummy_profile_1,
+        header: "Cody Fisher",
+        content: "Chief Executive Officer",
+      },
+      {
+        image: dummy_profile_2,
+        header: "Devon Lane",
+        content: "Chief Technology Officer",
+      },
+      {
+        image: dummy_profile_3,
+        header: "Albert Flores",
+        content: "Product Manager",
+      },
+    ],
+  },
+  contact: {
+    header: "Contact Us",
+    action: "Submit"
+  },
+  footer: {
+    socialMedia: [
+      {
+        icon: <RiTwitterFill size="1.8em" />,
+        label: "",
+        url: "",
+      },
+      {
+        icon: <RiLinkedinBoxFill size="1.8em" />,
+        label: "",
+        url: "",
+      },
+      {
+        icon: <RiFacebookCircleFill size="1.8em" />,
+        label: "",
+        url: "",
+      },
+    ],
+    address: [
+      "Singapore Blockchain Innovation Programme",
+      "#03-47, iCube Building",
+      "21 Heng Mui Keng Terrace",
+      "Singapore 119613",
+    ],
+    email: "contact@tezsign.com",
+    copyright: `Copyright © ${new Date().getFullYear()} TezSign`,
   },
 };

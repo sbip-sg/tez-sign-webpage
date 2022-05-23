@@ -1,7 +1,7 @@
 import { Box, Fade, Typography } from "@mui/material";
 import React from "react";
 
-import { useInView } from "../../utils/useInView";
+import { useInView } from "../../hooks/useInView";
 import { styles } from "./style";
 
 const TIMEOUT = 1000;

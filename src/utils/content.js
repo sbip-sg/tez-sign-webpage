@@ -1,158 +1,162 @@
 import {
   RiFacebookCircleFill,
   RiLinkedinBoxFill,
-  RiTwitterFill,
-} from "react-icons/ri";
+  RiTwitterFill
+} from 'react-icons/ri'
 
-import dummy_profile_1 from "../assets/images/dummy_profile_1.png";
-import dummy_profile_2 from "../assets/images/dummy_profile_2.png";
-import dummy_profile_3 from "../assets/images/dummy_profile_3.png";
-import heroImage from "../assets/images/dummy_image.png";
-import mobile from "../assets/images/mobile.png";
-import platform from "../assets/images/platform.png";
-import wallet from "../assets/images/wallet.png";
+import dummy_profile_1 from '../assets/images/dummy_profile_1.png'
+import dummy_profile_2 from '../assets/images/dummy_profile_2.png'
+import dummy_profile_3 from '../assets/images/dummy_profile_3.png'
+import heroImage from '../assets/images/dummy_image.png'
+import mobile from '../assets/images/mobile.png'
+import platform from '../assets/images/platform.png'
+import wallet from '../assets/images/wallet.png'
 
 export const content = {
   hero: {
     image: heroImage,
-    slogan: "A Digital Signing Platform for Everyone.",
-    subSlogan: "We aim to disrupt the signing experience with the blockchain.",
+    slogan: 'A Digital Signing Platform for Everyone.',
+    subSlogan: 'We aim to disrupt the signing experience with the blockchain.'
   },
   products: {
-    header: "Products",
+    header: 'Products',
     content:
-      "We provide three tools to facilitate trusted, secure, and efficient document signing.",
+      'We provide three tools to facilitate trusted, secure, and efficient document signing.',
     items: [
       {
         image: platform,
-        header: "TezSign Platform",
+        header: 'TezSign Platform',
         content:
-          "The platform provides easy-to-use interface to document owner and document signer, allowing them to simply sign and manage the documents, as well as verifying the history of the signed documents.",
+          'The platform provides easy-to-use interface to document owner and document signer, allowing them to simply sign and manage the documents, as well as verifying the history of the signed documents.'
       },
       {
         image: wallet,
-        header: "TezSign Browser Wallet",
+        header: 'TezSign Browser Wallet',
         content:
-          "The browser wallet manages users’ private keys, decentralized identities, and verifiable credentials, which enable flexible authentication to verify users’ identities and strong privacy protection to safeguard users’ documents.",
+          'The browser wallet manages users’ private keys, decentralized identities, and verifiable credentials, which enable flexible authentication to verify users’ identities and strong privacy protection to safeguard users’ documents.'
       },
       {
         image: mobile,
-        header: "TezSign Mobile Application",
+        header: 'TezSign Mobile Application',
         content:
-          "The mobile application offers similar functionalities to the platform for users to sign and manage their documents. Furthermore, it securely manages users’ private key and associated credentials.",
-      },
-    ],
+          'The mobile application offers similar functionalities to the platform for users to sign and manage their documents. Furthermore, it securely manages users’ private key and associated credentials.'
+      }
+    ]
   },
   tech: {
-    header: "Technologies",
-    content: "",
+    header: 'Technologies',
+    content: '',
     items: [
       {
         image: mobile,
-        header: "Verifiable Database",
+        header: 'Verifiable Database',
         content:
-          "An immutable and tamper-evident storage that supports accountability and data provenance verification.",
+          'An immutable and tamper-evident storage that supports accountability and data provenance verification.'
       },
       {
         image: mobile,
-        header: "Decentralized Identity",
+        header: 'Decentralized Identity',
         content:
-          "It stores user's identity in a decentralized manner, allowing individuals to fully manage their personal information.",
+          "It stores user's identity in a decentralized manner, allowing individuals to fully manage their personal information."
       },
       {
         image: mobile,
-        header: "Trusted Authentication",
+        header: 'Trusted Authentication',
         content:
-          "Fine-grained authentication based on verifiable credentials, providing high-level trust to individuals in signing.",
+          'Fine-grained authentication based on verifiable credentials, providing high-level trust to individuals in signing.'
       },
       {
         image: mobile,
-        header: "Secure Document Sharing",
+        header: 'Secure Document Sharing',
         content:
-          "Securely share documents via public-key cryptography, ensuring only qualified signers can view your documents.",
+          'Securely share documents via public-key cryptography, ensuring only qualified signers can view your documents.'
       },
       {
         image: mobile,
-        header: "Interoperable Blockchains",
+        header: 'Interoperable Blockchains',
         content:
-          "Facilitate different blockchain systems to communicate with each other, such that users from other blockchains can easily be integrated.",
-      },
-    ],
+          'Facilitate different blockchain systems to communicate with each other, such that users from other blockchains can easily be integrated.'
+      }
+    ]
   },
   resources: {
-    header: "Resources",
-    content: "",
+    header: 'Resources',
+    content: '',
     items: [
       {
-        image: "",
-        header: "How do I know the signers are authenticated?",
+        image: '',
+        header: 'How do I know the signers are authenticated?',
         content:
-          "Our platform provides a variety of authentication methods to verify the signers’ identities, including passcode, two-factor authentication, and decentralized identity. We ensure that only qualified signers can sign on the document.",
+          'Our platform provides a variety of authentication methods to verify the signers’ identities, including passcode, two-factor authentication, and decentralized identity. We ensure that only qualified signers can sign on the document.'
       },
       {
-        image: "",
-        header: "How safe is my document?",
+        image: '',
+        header: 'How safe is my document?',
         content:
-          "Your document is highly protected via standard encryption techniques, only qualified signers can open and read the content of the document.",
+          'Your document is highly protected via standard encryption techniques, only qualified signers can open and read the content of the document.'
       },
       {
-        image: "",
-        header: "How do I verify the signed document?",
+        image: '',
+        header: 'How do I verify the signed document?',
         content:
-          "You can upload the original copy of the document to the frontend, our platform will retrieve the actions history of this document, which are recorded in the immutable storages, either verifiable database or blockchain.",
-      },
-    ],
+          'You can upload the original copy of the document to the frontend, our platform will retrieve the actions history of this document, which are recorded in the immutable storages, either verifiable database or blockchain.'
+      }
+    ]
   },
   team: {
-    header: "Team",
-    content: "",
+    header: 'Team',
+    content: '',
     items: [
       {
         image: dummy_profile_1,
-        header: "Cody Fisher",
-        content: "Chief Executive Officer",
+        header: 'Cody Fisher',
+        content: 'Chief Executive Officer'
       },
       {
         image: dummy_profile_2,
-        header: "Devon Lane",
-        content: "Chief Technology Officer",
+        header: 'Devon Lane',
+        content: 'Chief Technology Officer'
       },
       {
         image: dummy_profile_3,
-        header: "Albert Flores",
-        content: "Product Manager",
-      },
-    ],
+        header: 'Albert Flores',
+        content: 'Product Manager'
+      }
+    ]
   },
   contact: {
-    header: "Contact Us",
-    action: "Submit"
+    header: 'Contact Us',
+    action: 'Submit'
+  },
+  partners: {
+    header: 'Partners',
+    items: [1, 2, 3]
   },
   footer: {
     socialMedia: [
       {
-        icon: <RiTwitterFill size="1.8em" />,
-        label: "",
-        url: "",
+        icon: <RiTwitterFill size='1.8em' />,
+        label: '',
+        url: ''
       },
       {
-        icon: <RiLinkedinBoxFill size="1.8em" />,
-        label: "",
-        url: "",
+        icon: <RiLinkedinBoxFill size='1.8em' />,
+        label: '',
+        url: ''
       },
       {
-        icon: <RiFacebookCircleFill size="1.8em" />,
-        label: "",
-        url: "",
-      },
+        icon: <RiFacebookCircleFill size='1.8em' />,
+        label: '',
+        url: ''
+      }
     ],
     address: [
-      "Singapore Blockchain Innovation Programme",
-      "#03-47, iCube Building",
-      "21 Heng Mui Keng Terrace",
-      "Singapore 119613",
+      'Singapore Blockchain Innovation Programme',
+      '#03-47, iCube Building',
+      '21 Heng Mui Keng Terrace',
+      'Singapore 119613'
     ],
-    email: "contact@tezsign.com",
-    copyright: `Copyright © ${new Date().getFullYear()} TezSign`,
-  },
-};
+    email: 'contact@tezsign.com',
+    copyright: `Copyright © ${new Date().getFullYear()} TezSign`
+  }
+}

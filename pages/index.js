@@ -1,11 +1,13 @@
 import { Box } from "@mui/material";
 import * as React from "react";
-import Contact from "../src/components/Contact";
 
+import Contact from "../src/components/Contact";
 import Footer from "../src/components/Footer";
 import Hero from "../src/components/Hero";
 import Nav from "../src/components/navComponents/Nav";
+import Partners from "../src/components/Partners";
 import Products from "../src/components/Products";
+import Resources from "../src/components/Resources";
 import Team from "../src/components/Team";
 import Technologies from "../src/components/Tech";
 
@@ -29,9 +31,13 @@ export default function Index() {
 
       <Technologies />
 
+      <Resources />
+
       <Team />
 
       <Contact />
+
+      <Partners />
 
       <Footer />
     </Box>

@@ -2,7 +2,7 @@ import { Box, Button, Fade, Typography } from "@mui/material";
 import Image from "next/image";
 import React from "react";
 
-import { useInView } from "../../utils/useInView";
+import { useInView } from "../../hooks/useInView";
 import { styles } from "./style";
 
 const Card = ({ data, imageSize, index }) => {

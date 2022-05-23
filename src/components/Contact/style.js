@@ -1,4 +1,4 @@
-import { theme } from "../../utils/theme";
+import { glass, theme } from "../../utils/theme";
 
 export const styles = {
   banner: {
@@ -53,9 +53,9 @@ export const styles = {
     marginLeft: "auto",
   },
   input: {
-    background: theme.palette.background.glass,
-    border: `1px solid ${theme.palette.grays.white}`,
-    boxShadow: "0px 4px 12px rgba(184, 184, 184, 0.25)",
+    background: glass.background,
+    border: glass.border,
+    boxShadow: glass.boxShadow,
     borderRadius: 2,
     flex: 1,
     marginRight: theme.spacing(2),

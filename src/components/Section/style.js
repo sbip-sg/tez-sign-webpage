@@ -37,7 +37,7 @@ export const styles = {
     justifyContent: "center",
     maxWidth: bodyWidth.maxWidth,
     // overflow: "hidden",
-    paddingBottom: { xs: theme.spacing(2), sm: theme.spacing(10) },
+    paddingBottom: { xs: theme.spacing(0), sm: theme.spacing(10) },
     paddingTop: { xs: `${appBar.height}px`, sm: theme.spacing(10) },
     position: "relative",
     width: bodyWidth.width,
@@ -59,7 +59,6 @@ export const styles = {
     fontWeight: 700,
     letterSpacing: 1,
     lineHeight: 1.5,
-    marginTop: theme.spacing(2.5),
     marginBottom: theme.spacing(1),
   },
 };

@@ -2,8 +2,8 @@ import { Box, Fade, Slide, Typography } from "@mui/material";
 import Image from "next/image";
 import React from "react";
 
+import background from "../../assets/background/background_1.png";
 import { useInView } from "../../hooks/useInView";
-import background from "../../assets/background/background_hero.png";
 import { content } from "../../utils/content";
 import { styles } from "./style";
 
@@ -25,14 +25,14 @@ const Hero = () => {
           </Typography>
         </Box>
 
-        <Fade in={visible} timeout={1000}>
+        <Fade in={visible} timeout={800}>
           <Box sx={styles.heroImageContainer}>
             <Image src={content.hero.image} alt={"hero_image"} />
           </Box>
         </Fade>
       </Box>
 
-      <Slide direction="right" in={visible} timeout={1000}>
+      <Slide direction="right" in={visible} timeout={300}>
         <Box sx={styles.heroBackground}>
           <Image src={background} alt={"background_image"} />
         </Box>

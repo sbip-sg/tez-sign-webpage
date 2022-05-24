@@ -18,9 +18,8 @@ export const styles = {
       color: theme.palette.grays[400],
     },
   },
-  footerContainer: {
+  footerBodyContainer: {
     alignItems: "flex-start",
-    backgroundColor: theme.palette.grays.white,
     display: "flex",
     flexDirection: "column",
     height: 560,
@@ -31,6 +30,15 @@ export const styles = {
     overflow: "hidden",
     position: "relative",
     width: bodyWidth.width,
+  },
+  footerContainer: {
+    alignItems: "center",
+    backgroundColor: theme.palette.grays.white,
+    display: "flex",
+    height: "100%",
+    justifyContent: "center",
+    position: "relative",
+    width: "100%",
   },
   footerContent: {
     marginBottom: theme.spacing(2),

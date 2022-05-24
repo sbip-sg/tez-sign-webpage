@@ -7,6 +7,7 @@ export const styles = {
     border: glass.border,
     boxShadow: glass.boxShadow,
     borderRadius: `10px !important`,
+    marginTop: `0px !important`,
     marginBottom: theme.spacing(2),
     padding: { xs: "4px 8px", sm: "16px 16px" },
     "&:before": {
@@ -33,11 +34,25 @@ export const styles = {
       height: 200,
     },
   },
-  resoucesContainer: {
+  resoucesBackground: {
+    position: "absolute",
+    left: -720,
+    top: { xs: -400, sm: -400 },
+    zIndex: 0,
+  },
+  resoucesBodyContainer: {
     display: "flex",
     flexDirection: "column",
     marginBottom: theme.spacing(1),
     marginTop: theme.spacing(7),
+    width: "100%",
+  },
+  resoucesContainer: {
+    alignItems: "center",
+    display: "flex",
+    height: "100%",
+    justifyContent: "center",
+    position: "relative",
     width: "100%",
   },
   formRow: {

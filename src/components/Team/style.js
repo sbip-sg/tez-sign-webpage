@@ -21,6 +21,14 @@ export const styles = {
     display: "flex",
     margin: theme.spacing(1),
   },
+  teamContainer: {
+    alignItems: "center",
+    display: "flex",
+    height: "100%",
+    justifyContent: "center",
+    position: "relative",
+    width: "100%",
+  },
   teamItems: {
     alignItems: "flex-start",
     display: "flex",

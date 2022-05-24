@@ -1,4 +1,4 @@
-import { bodyWidth, theme } from "../../utils/theme";
+import { theme } from "../../utils/theme";
 
 export const styles = {
   banner: {
@@ -20,6 +20,20 @@ export const styles = {
   margin: {
     display: "flex",
     margin: theme.spacing(1),
+  },
+  techBackground: {
+    position: "absolute",
+    right: -480,
+    top: { xs: -1300, sm: -1780 },
+    zIndex: 0,
+  },
+  techContainer: {
+    alignItems: "center",
+    display: "flex",
+    height: "100%",
+    justifyContent: "center",
+    position: "relative",
+    width: "100%",
   },
   techItems: {
     alignItems: "flex-start",

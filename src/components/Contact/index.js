@@ -93,117 +93,119 @@ const Contact = () => {
   };
 
   return (
-    <Section
-      content={content.contact.content}
-      header={content.contact.header}
-      id={NAV_ROUTES.get("CONTACT").ID}
-    >
-      <Box sx={styles.formContainer}>
-        <Box sx={styles.formRow}>
-          <Paper sx={styles.input}>
-            <InputBase
-              onChange={handleChangeInput("name")}
-              placeholder="Name*"
-              sx={styles.inputBase}
-            />
-          </Paper>
+    <Box sx={styles.contactContainer}>
+      <Section
+        content={content.contact.content}
+        header={content.contact.header}
+        id={NAV_ROUTES.get("CONTACT").ID}
+      >
+        <Box sx={styles.formContainer}>
+          <Box sx={styles.formRow}>
+            <Paper sx={styles.input}>
+              <InputBase
+                onChange={handleChangeInput("name")}
+                placeholder="Name*"
+                sx={styles.inputBase}
+              />
+            </Paper>
 
-          <Paper sx={styles.input}>
-            <InputBase
-              onChange={handleChangeInput("lastName")}
-              placeholder="Last name*"
-              sx={styles.inputBase}
-            />
-          </Paper>
-        </Box>
+            <Paper sx={styles.input}>
+              <InputBase
+                onChange={handleChangeInput("lastName")}
+                placeholder="Last name*"
+                sx={styles.inputBase}
+              />
+            </Paper>
+          </Box>
 
-        <Box sx={styles.formRow}>
-          <Paper sx={styles.input}>
-            <InputBase
-              onChange={handleChangeInput("email")}
-              placeholder="Email address*"
-              sx={styles.inputBase}
-            />
-          </Paper>
+          <Box sx={styles.formRow}>
+            <Paper sx={styles.input}>
+              <InputBase
+                onChange={handleChangeInput("email")}
+                placeholder="Email address*"
+                sx={styles.inputBase}
+              />
+            </Paper>
 
-          <Paper sx={styles.input}>
-            <InputBase
-              onChange={handleChangeInput("phone")}
-              placeholder="Phone number"
-              sx={styles.inputBase}
-            />
-          </Paper>
-        </Box>
+            <Paper sx={styles.input}>
+              <InputBase
+                onChange={handleChangeInput("phone")}
+                placeholder="Phone number"
+                sx={styles.inputBase}
+              />
+            </Paper>
+          </Box>
 
-        <Box sx={styles.formRow}>
-          <Paper sx={styles.input}>
-            <InputBase
-              multiline
-              onChange={handleChangeInput("message")}
-              placeholder="Your message*"
-              rows={8}
-              sx={styles.inputBase}
-            />
-          </Paper>
-        </Box>
+          <Box sx={styles.formRow}>
+            <Paper sx={styles.input}>
+              <InputBase
+                multiline
+                onChange={handleChangeInput("message")}
+                placeholder="Your message*"
+                rows={8}
+                sx={styles.inputBase}
+              />
+            </Paper>
+          </Box>
 
-        <Box sx={styles.margin} />
+          <Box sx={styles.margin} />
 
-        <Box sx={styles.errorUnit}>
-          {showRequired && (
-            <Typography sx={styles.error}>
-              {"Please complete all required fields."}
-            </Typography>
-          )}
-
-          {invalidEmail && (
-            <Typography sx={styles.error}>
-              {"Please provide a valid email address."}
-            </Typography>
-          )}
-        </Box>
-
-        <Box sx={styles.margin} />
-
-        <Box sx={styles.formRow}>
-          <Button
-            sx={styles.button}
-            color="secondary"
-            onClick={handleSubmitMessage}
-            variant="contained"
-          >
-            {isLoading ? (
-              "Sending..."
-            ) : (
-              <>
-                <Box sx={styles.grow} />
-                {content.contact.action}
-                <Box sx={styles.grow} />
-                <RiArrowRightLine />
-              </>
+          <Box sx={styles.errorUnit}>
+            {showRequired && (
+              <Typography sx={styles.error}>
+                {"Please complete all required fields."}
+              </Typography>
             )}
-          </Button>
-        </Box>
-      </Box>
 
-      {/* Snackbar */}
-      <Snackbar
-        action={
-          <Button
-            color="inherit"
-            sx={{ minWidth: "inherit" }}
-            onClick={() => setSnackbar({ ...snackbar, isOpen: false })}
-          >
-            <RiCloseLine size="1.4em" />
-          </Button>
-        }
-        anchorOrigin={{ vertical: "top", horizontal: "right" }}
-        open={snackbar.isOpen}
-        onClose={() => setSnackbar({ ...snackbar, isOpen: false })}
-        message={snackbar.message}
-        ContentProps={{ sx: styles.snackbar }}
-      />
-    </Section>
+            {invalidEmail && (
+              <Typography sx={styles.error}>
+                {"Please provide a valid email address."}
+              </Typography>
+            )}
+          </Box>
+
+          <Box sx={styles.margin} />
+
+          <Box sx={styles.formRow}>
+            <Button
+              sx={styles.button}
+              color="secondary"
+              onClick={handleSubmitMessage}
+              variant="contained"
+            >
+              {isLoading ? (
+                "Sending..."
+              ) : (
+                <>
+                  <Box sx={styles.grow} />
+                  {content.contact.action}
+                  <Box sx={styles.grow} />
+                  <RiArrowRightLine />
+                </>
+              )}
+            </Button>
+          </Box>
+        </Box>
+
+        {/* Snackbar */}
+        <Snackbar
+          action={
+            <Button
+              color="inherit"
+              sx={{ minWidth: "inherit" }}
+              onClick={() => setSnackbar({ ...snackbar, isOpen: false })}
+            >
+              <RiCloseLine size="1.4em" />
+            </Button>
+          }
+          anchorOrigin={{ vertical: "top", horizontal: "right" }}
+          open={snackbar.isOpen}
+          onClose={() => setSnackbar({ ...snackbar, isOpen: false })}
+          message={snackbar.message}
+          ContentProps={{ sx: styles.snackbar }}
+        />
+      </Section>
+    </Box>
   );
 };
 

@@ -10,17 +10,19 @@ import { styles } from "./style";
 
 const Team = () => {
   return (
-    <Section
-      content={content.team.content}
-      header={content.team.header}
-      id={NAV_ROUTES.get("TEAM").ID}
-    >
-      <Box sx={styles.teamItems}>
-        {content.team?.items.map((item, index) => {
-          return <Card data={item} key={index} imageSize="lg" />;
-        })}
-      </Box>
-    </Section>
+    <Box sx={styles.teamContainer}>
+      <Section
+        content={content.team.content}
+        header={content.team.header}
+        id={NAV_ROUTES.get("TEAM").ID}
+      >
+        <Box sx={styles.teamItems}>
+          {content.team?.items.map((item, index) => {
+            return <Card data={item} key={index} imageSize="lg" />;
+          })}
+        </Box>
+      </Section>
+    </Box>
   );
 };
 

@@ -23,13 +23,21 @@ export const styles = {
       width: "100%",
     },
   },
+  contactContainer: {
+    alignItems: "center",
+    display: "flex",
+    height: "100%",
+    justifyContent: "center",
+    position: "relative",
+    width: "100%",
+  },
   error: {
     color: theme.palette.danger.main,
   },
   formContainer: {
     display: "flex",
     flexDirection: "column",
-    marginBottom: theme.spacing(1),
+    marginBottom: theme.spacing(7),
     marginTop: theme.spacing(7),
     width: "100%",
   },

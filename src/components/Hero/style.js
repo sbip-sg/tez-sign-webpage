@@ -25,6 +25,7 @@ export const styles = {
   heroBackground: {
     left: -480,
     position: "absolute",
+    top: { xs: -520, sm: -680 },
     zIndex: 0,
   },
   heroBody: {
@@ -39,7 +40,6 @@ export const styles = {
     display: "flex",
     height: "100%",
     justifyContent: "center",
-    // overflow: "hidden",
     position: "relative",
     width: "100%",
   },

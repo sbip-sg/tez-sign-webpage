@@ -20,7 +20,7 @@ const Card = ({ data, imageSize, index }) => {
       }}
     >
       {data.image && (
-        <Fade in={visible} timeout={1000}>
+        <Fade in={visible} timeout={880}>
           <Box
             sx={imageSize === "lg" ? styles.cardImageLg : styles.cardImageSm}
           >
@@ -29,7 +29,7 @@ const Card = ({ data, imageSize, index }) => {
         </Fade>
       )}
 
-      <Fade in={visible} timeout={2000}>
+      <Fade in={visible} timeout={1000}>
         <Box sx={styles.cardContent}>
           <Typography variant={"h5"} sx={styles.cardHeader}>
             {data.header}

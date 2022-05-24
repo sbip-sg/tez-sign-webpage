@@ -1,27 +1,21 @@
-import { AppBar, Toolbar, Typography } from "@mui/material";
+import { AppBar, Toolbar } from "@mui/material";
 import * as React from "react";
 
 import Logo from "../../../components/Logo";
 import NavList from "../NavList";
-// import NavMenu from "../../containers/NavMenu";
+import NavMenu from "../NavMenu";
 
 import { styles } from "./style";
 
 const Nav = () => {
-  const handleScrollIntoView = (section) => () => {
-    if (typeof window !== "undefined") {
-      document.querySelector(section)?.scrollIntoView({
-        behavior: "smooth",
-      });
-    }
-  };
-
   return (
-    <AppBar elevation={0} position="static" sx={styles.nav}>
+    <AppBar elevation={0} position="sticky" sx={styles.nav}>
       <Toolbar sx={styles.toolbar}>
         <Logo />
 
-        <NavList scrollIntoView={handleScrollIntoView} />
+        <NavList />
+
+        <NavMenu />
       </Toolbar>
     </AppBar>
   );

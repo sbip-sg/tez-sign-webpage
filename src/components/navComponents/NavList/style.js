@@ -8,8 +8,9 @@ export const styles = {
     width: "100%",
     zIndex: 0,
   },
-  indicatorActive: {
-    background: theme.palette.primary.gradient,
+  margin: {
+    display: "flex",
+    margin: theme.spacing(1),
   },
   navListContainer: {
     alignItems: "center",
@@ -38,25 +39,11 @@ export const styles = {
     textDecoration: "none",
     transition: "all 0.5s ease-in-out",
     "&:hover": {
-      color: theme.palette.grays[400],
+      color: theme.palette.primary.main,
     },
     [theme.breakpoints.only("md")]: {
       marginLeft: theme.spacing(1),
       marginRight: theme.spacing(1),
     },
-  },
-  linkTextActive: {
-    color: theme.palette.text.high,
-    "&:hover": {
-      color: theme.palette.text.high,
-    },
-  },
-  linkTextIcon: {
-    marginLeft: theme.spacing(1),
-    width: 18,
-  },
-  margin: {
-    display: "flex",
-    margin: theme.spacing(1),
   },
 };

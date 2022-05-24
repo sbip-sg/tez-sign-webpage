@@ -22,6 +22,11 @@ export const styles = {
     flexGrow: 1,
     marginLeft: "auto",
   },
+  heroBackground: {
+    left: -480,
+    position: "absolute",
+    zIndex: 0,
+  },
   heroBody: {
     display: "flex",
     flexDirection: "column",
@@ -32,14 +37,28 @@ export const styles = {
   heroContainer: {
     alignItems: "center",
     display: "flex",
+    height: "100%",
+    justifyContent: "center",
+    // overflow: "hidden",
+    position: "relative",
+    width: "100%",
+  },
+  heroContent: {
+    color: theme.palette.secondary.main,
+    fontSize: theme.typography.fontSize * 1.6,
+    lineHeight: 1.5,
+    whiteSpace: "pre-line",
+  },
+  heroForeground: {
+    alignItems: "center",
+    display: "flex",
     flexDirection: { xs: "column-reverse", sm: "row" },
     height: { xs: "85vh", sm: "90vh" },
     maxHeight: 1500,
     maxWidth: bodyWidth.maxWidth,
     minWidth: 600,
-    overflow: "hidden",
-    position: "relative",
     width: bodyWidth.width,
+    zIndex: 1,
     [theme.breakpoints.only("xs")]: {
       justifyContent: "flex-end !important",
       marginBottom: theme.spacing(8),
@@ -47,12 +66,6 @@ export const styles = {
       maxWidth: bodyWidth.width,
       minWidth: bodyWidth.width,
     },
-  },
-  heroContent: {
-    color: theme.palette.secondary.main,
-    fontSize: theme.typography.fontSize * 1.6,
-    lineHeight: 1.5,
-    whiteSpace: "pre-line",
   },
   heroHead: {
     color: theme.palette.secondary.main,

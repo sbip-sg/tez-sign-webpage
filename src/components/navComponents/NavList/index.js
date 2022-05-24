@@ -4,7 +4,15 @@ import React from "react";
 import { NAV_ROUTES } from "../../../utils/routes";
 import { styles } from "./style";
 
-const NavList = ({ scrollIntoView }) => {
+const NavList = () => {
+  const handleOnClickOption = (id) => (event) => {
+    if (typeof window !== "undefined") {
+      document.querySelector(`#${id}`)?.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <Box sx={styles.navListContainer}>
       {Array.from(NAV_ROUTES.keys()).map((key) => (
@@ -12,7 +20,7 @@ const NavList = ({ scrollIntoView }) => {
         <Typography
           key={key}
           sx={styles.navText}
-          onClick={scrollIntoView(`#${NAV_ROUTES.get(key).ID}`)}
+          onClick={handleOnClickOption(NAV_ROUTES.get(key).ID)}
         >
           {NAV_ROUTES.get(key).LABEL}
         </Typography>

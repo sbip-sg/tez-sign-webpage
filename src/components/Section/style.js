@@ -1,4 +1,4 @@
-import { bodyWidth, theme } from "../../utils/theme";
+import { appBar, bodyWidth, theme } from "../../utils/theme";
 
 export const styles = {
   banner: {
@@ -35,10 +35,10 @@ export const styles = {
     alignItems: "start",
     display: "flex",
     justifyContent: "center",
-    marginBottom: { xs: theme.spacing(2), sm: theme.spacing(10) },
-    marginTop: { xs: theme.spacing(2), sm: theme.spacing(10) },
     maxWidth: bodyWidth.maxWidth,
     // overflow: "hidden",
+    paddingBottom: { xs: theme.spacing(2), sm: theme.spacing(10) },
+    paddingTop: { xs: `${appBar.height}px`, sm: theme.spacing(10) },
     position: "relative",
     width: bodyWidth.width,
   },

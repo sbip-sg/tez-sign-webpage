@@ -11,7 +11,7 @@ export const styles = {
   },
   nav: {
     alignItems: "center",
-    backgroundColor: "transparent",
+    backgroundColor: theme.palette.grays.white,
     borderBottomColor: theme.palette.grays["300"],
     borderBottomWidth: 0,
     borderBottomStyle: "solid",

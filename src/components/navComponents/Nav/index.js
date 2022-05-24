@@ -8,12 +8,20 @@ import NavList from "../NavList";
 import { styles } from "./style";
 
 const Nav = () => {
+  const handleScrollIntoView = (section) => () => {
+    if (typeof window !== "undefined") {
+      document.querySelector(section)?.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <AppBar elevation={0} position="static" sx={styles.nav}>
       <Toolbar sx={styles.toolbar}>
         <Logo />
 
-        <NavList />
+        <NavList scrollIntoView={handleScrollIntoView} />
       </Toolbar>
     </AppBar>
   );

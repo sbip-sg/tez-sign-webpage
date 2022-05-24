@@ -1,25 +1,27 @@
-import { Box } from '@mui/material'
-import React from 'react'
+import { Box } from "@mui/material";
+import React from "react";
 
-import Card from '../Card'
-import Section from '../Section'
+import Card from "../Card";
+import Section from "../Section";
 
-import { content } from '../../utils/content'
-import { styles } from './style'
+import { content } from "../../utils/content";
+import { NAV_ROUTES } from "../../utils/routes";
+import { styles } from "./style";
 
 const Products = () => {
   return (
     <Section
-      header={content.products.header}
       content={content.products.content}
+      header={content.products.header}
+      id={NAV_ROUTES.get("PRODUCTS").ID}
     >
       <Box sx={styles.productItems}>
         {content.products?.items.map((item, index) => {
-          return <Card data={item} key={index} imageSize='lg' />
+          return <Card data={item} key={index} imageSize="lg" />;
         })}
       </Box>
     </Section>
-  )
-}
+  );
+};
 
-export default Products
+export default Products;

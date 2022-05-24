@@ -6,13 +6,13 @@ import { styles } from "./style";
 
 const TIMEOUT = 1000;
 
-const Section = ({ children, content, header }) => {
+const Section = ({ children, content, header, id }) => {
   const [setRef, visible] = useInView({
     threshold: 0.1,
   });
 
   return (
-    <Box component="div" ref={setRef} sx={styles.sectionContainer}>
+    <Box component="div" id={id} ref={setRef} sx={styles.sectionContainer}>
       <Fade in={visible} timeout={TIMEOUT}>
         <Box component="div" sx={styles.sectionBody}>
           <Typography variant={"h3"} sx={styles.sectionTitle}>

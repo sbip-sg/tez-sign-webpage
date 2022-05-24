@@ -16,7 +16,7 @@ export const styles = {
   button: {
     borderRadius: 50,
     fontSize: theme.typography.fontSize * 1.6,
-    padding: 2,
+    padding: "12px 20px",
     textTransform: "none",
     width: 296,
     [theme.breakpoints.only("xs")]: {
@@ -54,9 +54,10 @@ export const styles = {
   },
   input: {
     background: glass.background,
+    backdropFilter: glass.backdropFilter,
     border: glass.border,
     boxShadow: glass.boxShadow,
-    borderRadius: 2,
+    borderRadius: `10px !important`,
     flex: 1,
     marginRight: theme.spacing(2),
     [theme.breakpoints.only("xs")]: {
@@ -72,5 +73,10 @@ export const styles = {
   margin: {
     display: "flex",
     margin: theme.spacing(1),
+  },
+  snackbar: {
+    background: theme.palette.secondary.main,
+    boxShadow: glass.boxShadow,
+    borderRadius: `10px !important`,
   },
 };

@@ -2,40 +2,45 @@ export const NAV_ROUTES = new Map([
   [
     "PRODUCTS",
     {
-      PATH: "/products",
+      ID: "_products",
       LABEL: "Products",
+      PATH: "/products",
       VALUE: 0,
     },
   ],
   [
     "TECHNOLOGIES",
     {
-      PATH: "/technologies",
+      ID: "_technologies",
       LABEL: "Technologies",
+      PATH: "/technologies",
       VALUE: 1,
     },
   ],
   [
     "RESOURCE",
     {
-      PATH: "/resource",
+      ID: "_resource",
       LABEL: "Resource",
+      PATH: "/resource",
       VALUE: 2,
     },
   ],
   [
     "TEAM",
     {
-      PATH: "/team",
+      ID: "_team",
       LABEL: "Team",
+      PATH: "/team",
       VALUE: 3,
     },
   ],
   [
     "CONTACT",
     {
-      PATH: "/contact",
+      ID: "_contact",
       LABEL: "Contact",
+      PATH: "/contact",
       VALUE: 4,
     },
   ],

@@ -5,20 +5,22 @@ import Card from "../Card";
 import Section from "../Section";
 
 import { content } from "../../utils/content";
+import { NAV_ROUTES } from "../../utils/routes";
 import { styles } from "./style";
 
 const Tech = () => {
-
   return (
-      <Section header={content.tech.header} content={content.tech.content}>
-        <Box sx={styles.techItems}>
-          {content.tech?.items.map((item, index) => {
-            return (
-              <Card data={item} key={index} imageSize="sm" />
-            );
-          })}
-        </Box>
-      </Section>
+    <Section
+      content={content.tech.content}
+      header={content.tech.header}
+      id={NAV_ROUTES.get("TECHNOLOGIES").ID}
+    >
+      <Box sx={styles.techItems}>
+        {content.tech?.items.map((item, index) => {
+          return <Card data={item} key={index} imageSize="sm" />;
+        })}
+      </Box>
+    </Section>
   );
 };
 

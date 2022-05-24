@@ -1,10 +1,18 @@
-import { Box, Button, InputBase, Paper, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  InputBase,
+  Paper,
+  Snackbar,
+  Typography,
+} from "@mui/material";
 import React, { useState } from "react";
-import { RiArrowRightLine } from "react-icons/ri";
+import { RiArrowRightLine, RiCloseLine } from "react-icons/ri";
 
 import Section from "../Section";
 
 import { content } from "../../utils/content";
+import { NAV_ROUTES } from "../../utils/routes";
 import { styles } from "./style";
 
 const Contact = () => {
@@ -53,14 +61,16 @@ const Contact = () => {
     if (validEmail && !isEmpty) {
       setIsLoading(true);
       try {
-        const response = await fetch(
-          `${process.env.REACT_APP_BACKEND_URL}/messages`,
-          {
-            method: "post",
-            body: JSON.stringify(contactDetails),
-          }
-        );
-        const message = await response.text();
+        // !!! to include official email for recieving message
+        const response = { status: 400 };
+        // const response = await fetch(
+        //   `${process.env.REACT_APP_BACKEND_URL}/messages`,
+        //   {
+        //     method: "post",
+        //     body: JSON.stringify(contactDetails),
+        //   }
+        // );
+        // const message = await response.text();
 
         if (response.status === 200) {
           setSnackbar({ message: message, isOpen: true });
@@ -83,7 +93,11 @@ const Contact = () => {
   };
 
   return (
-    <Section header={content.contact.header} content={content.contact.content}>
+    <Section
+      content={content.contact.content}
+      header={content.contact.header}
+      id={NAV_ROUTES.get("CONTACT").ID}
+    >
       <Box sx={styles.formContainer}>
         <Box sx={styles.formRow}>
           <Paper sx={styles.input}>
@@ -158,16 +172,37 @@ const Contact = () => {
             onClick={handleSubmitMessage}
             variant="contained"
           >
-            <Box sx={styles.grow} />
-
-            {content.contact.action}
-
-            <Box sx={styles.grow} />
-
-            <RiArrowRightLine />
+            {isLoading ? (
+              "Sending..."
+            ) : (
+              <>
+                <Box sx={styles.grow} />
+                {content.contact.action}
+                <Box sx={styles.grow} />
+                <RiArrowRightLine />
+              </>
+            )}
           </Button>
         </Box>
       </Box>
+
+      {/* Snackbar */}
+      <Snackbar
+        action={
+          <Button
+            color="inherit"
+            sx={{ minWidth: "inherit" }}
+            onClick={() => setSnackbar({ ...snackbar, isOpen: false })}
+          >
+            <RiCloseLine size="1.4em" />
+          </Button>
+        }
+        anchorOrigin={{ vertical: "top", horizontal: "right" }}
+        open={snackbar.isOpen}
+        onClose={() => setSnackbar({ ...snackbar, isOpen: false })}
+        message={snackbar.message}
+        ContentProps={{ sx: styles.snackbar }}
+      />
     </Section>
   );
 };

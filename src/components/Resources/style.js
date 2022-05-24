@@ -3,10 +3,12 @@ import { glass, theme } from '../../utils/theme'
 export const styles = {
   accordionContainer: {
     background: glass.background,
+    backdropFilter: glass.backdropFilter,
     border: glass.border,
     boxShadow: glass.boxShadow,
-    borderRadius: `8px !important`,
+    borderRadius: `10px !important`,
     marginBottom: theme.spacing(2),
+    padding:"16px 16px",
     '&:before': {
       display: 'none'
     }

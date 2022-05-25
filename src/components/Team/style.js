@@ -36,10 +36,6 @@ export const styles = {
     flexWrap: "wrap",
     justifyContent: "flex-start",
     marginTop: theme.spacing(7),
-    width: "80%",
-    [theme.breakpoints.only("xs")]: {
-      minWidth: "80%",
-      width: "100%",
-    },
+    width: { xs: "100%", md: "80%" },
   },
 };

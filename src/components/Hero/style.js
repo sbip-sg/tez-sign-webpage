@@ -52,14 +52,14 @@ export const styles = {
   heroForeground: {
     alignItems: "center",
     display: "flex",
-    flexDirection: { xs: "column-reverse", sm: "row" },
-    height: { xs: "85vh", sm: "90vh" },
+    flexDirection: { xs: "column-reverse", md: "row" },
+    height: { xs: "fit-content", md: "90vh" },
     maxHeight: 1500,
     maxWidth: bodyWidth.maxWidth,
     minWidth: 600,
     width: bodyWidth.width,
     zIndex: 1,
-    [theme.breakpoints.only("xs")]: {
+    [theme.breakpoints.down("md")]: {
       justifyContent: "flex-end !important",
       marginBottom: theme.spacing(8),
       maxHeight: "inherit",
@@ -79,14 +79,9 @@ export const styles = {
     },
   },
   heroImageContainer: {
-    backgroundAttachment: "fixed",
-    backgroundPosition: "top center",
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "contain",
-    [theme.breakpoints.only("xs")]: {
-      backgroundAttachment: "inherit",
-      backgroundPosition: "top right",
-    },
+    marginBottom: { xs: theme.spacing(4), sm: theme.spacing(0) },
+    marginLeft: { sm: "auto" },
+    width: { xs: "100%", sm: "36%", md: "100%" },
   },
   margin: {
     display: "flex",

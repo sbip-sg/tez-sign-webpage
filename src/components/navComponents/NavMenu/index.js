@@ -14,11 +14,10 @@ const NavMenu = () => {
 
   const handleOnClickOption = (id) => (event) => {
     setIsMenuOpen(false);
-    if (typeof window !== "undefined") {
-      document.querySelector(`#${id}`)?.scrollIntoView({
-        behavior: "smooth",
-      });
-    }
+
+    document.querySelector(`#${id}`)?.scrollIntoView({
+      behavior: "smooth",
+    });
   };
 
   return (

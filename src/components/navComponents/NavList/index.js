@@ -6,11 +6,11 @@ import { styles } from "./style";
 
 const NavList = () => {
   const handleOnClickOption = (id) => (event) => {
-    if (typeof window !== "undefined") {
+    // if (typeof window !== "undefined") {
       document.querySelector(`#${id}`)?.scrollIntoView({
         behavior: "smooth",
       });
-    }
+    // }
   };
 
   return (

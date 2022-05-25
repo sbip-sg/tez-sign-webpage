@@ -24,39 +24,41 @@ import Technologies from "../src/components/Tech";
 export default function Index() {
   return (
     // <Suspense fallback={<Typography>Loading...</Typography>}>
+    <Box
+      sx={{
+        alignItems: "center",
+        display: "flex",
+        flexDirection: "column",
+        minHeight: "100vh",
+        position: "relative",
+        // minWidth: "100vw",
+        width: "100vw",
+      }}
+    >
+      <Nav />
       <Box
         sx={{
-          alignItems: "center",
-          display: "flex",
-          flexDirection: "column",
-          minHeight: "100vh",
-          position: "relative",
+          overflow: { xs: "hidden", sm: "hidden", md: "inherit" },
           width: "100%",
         }}
       >
-        <Nav />
-        <Box
-          sx={{
-            overflow: "hidden",
-          }}
-        >
-          <Hero />
+        <Hero />
 
-          <Products />
+        <Products />
 
-          <Technologies />
+        <Technologies />
 
-          <Resources />
+        <Resources />
 
-          <Team />
+        <Team />
 
-          <Contact />
+        <Contact />
 
-          <Partners />
+        <Partners />
 
-          <Footer />
-        </Box>
+        <Footer />
       </Box>
+    </Box>
     // </Suspense>
   );
 }

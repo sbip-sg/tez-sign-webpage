@@ -1,18 +1,6 @@
 import { theme } from "../../utils/theme";
 
 export const styles = {
-  banner: {
-    backgroundPosition: "center",
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "contain",
-    height: 350,
-    position: "absolute",
-    top: 0,
-    width: 600,
-    [theme.breakpoints.only("xs")]: {
-      height: 200,
-    },
-  },
   grow: {
     flexGrow: 1,
     marginLeft: "auto",

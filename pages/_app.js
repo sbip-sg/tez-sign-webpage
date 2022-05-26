@@ -17,6 +17,7 @@
 //     <CacheProvider value={emotionCache}>
 //       <Head>
 //         <meta name="viewport" content="initial-scale=1, width=device-width" />
+{/*        <title>TezSign</title> */}
 //       </Head>
 //       <ThemeProvider theme={theme}>
 //         <CssBaseline />
@@ -61,6 +62,7 @@ export default function TezSign(props) {
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width"
         />
+        <title>TezSign</title>
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />

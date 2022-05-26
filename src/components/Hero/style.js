@@ -25,7 +25,7 @@ export const styles = {
   heroBackground: {
     left: -480,
     position: "absolute",
-    top: { xs: -520, sm: -680 },
+    top: { xs: -500, sm: -560 },
     zIndex: 0,
   },
   heroBody: {

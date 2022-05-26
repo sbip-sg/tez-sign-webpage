@@ -1,7 +1,8 @@
-import { Box, Typography } from "@mui/material";
-import React, { lazy, Suspense } from "react";
+import { Box } from "@mui/material";
+import React, { lazy, Suspense, useState } from "react";
 
 import Contact from "../src/components/Contact";
+import CustomSnackbar from "../src/components/CustomSnackbar";
 import Footer from "../src/components/Footer";
 import Hero from "../src/components/Hero";
 import Nav from "../src/components/navComponents/Nav";
@@ -21,7 +22,11 @@ import Technologies from "../src/components/Tech";
 // const Team = lazy(() => import("../src/components/Team"));
 // const Technologies = lazy(() => import("../src/components/Tech"));
 
+import { bodyWidth } from "../src/utils/theme";
+
 export default function Index() {
+  const [snackbar, setSnackbar] = useState({ message: "", isOpen: false });
+
   return (
     // <Suspense fallback={<Typography>Loading...</Typography>}>
     <Box
@@ -31,14 +36,15 @@ export default function Index() {
         flexDirection: "column",
         minHeight: "100vh",
         position: "relative",
-        // minWidth: "100vw",
-        width: "100vw",
+        width: "100%",
       }}
     >
       <Nav />
+
       <Box
         sx={{
-          overflow: { xs: "hidden", sm: "hidden", md: "inherit" },
+          maxWidth: bodyWidth.maxWidth,
+          overflowX: { xs: "hidden", sm: "hidden", md: "clip" },
           width: "100%",
         }}
       >
@@ -52,12 +58,14 @@ export default function Index() {
 
         <Team />
 
-        <Contact />
+        <Contact setSnackbar={setSnackbar} />
 
         <Partners />
 
         <Footer />
       </Box>
+
+      <CustomSnackbar snackbar={snackbar} setSnackbar={setSnackbar} />
     </Box>
     // </Suspense>
   );

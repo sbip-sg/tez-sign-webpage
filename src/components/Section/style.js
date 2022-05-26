@@ -42,8 +42,8 @@ export const styles = {
     width: bodyWidth.width,
   },
   sectionDivider: {
-    backgroundColor: theme.palette.primary.main,
-    boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
+    backgroundColor: theme.palette.secondary.main,
+    // boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
     height: 4,
     width: 80,
   },

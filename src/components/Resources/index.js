@@ -20,7 +20,7 @@ import { styles } from "./style";
 
 const Resources = () => {
   const [setRef, visible] = useInView({
-    threshold: 0.1,
+    threshold: 0.3,
   });
 
   return (
@@ -54,11 +54,11 @@ const Resources = () => {
         </Box>
       </Section>
 
-      <Slide direction="right" in={visible} timeout={800}>
+      {/* <Slide direction="right" in={visible} timeout={800}>
         <Box sx={styles.resoucesBackground}>
           <Image src={background} alt={"background_image"} />
         </Box>
-      </Slide>
+      </Slide> */}
     </Box>
   );
 };

@@ -11,8 +11,8 @@ export const styles = {
   },
   techBackground: {
     position: "absolute",
-    right: -480,
-    top: { xs: -1300, sm: -1780 },
+    right: -640,
+    top: { xs: -1060, sm: -1650 },
     zIndex: 0,
   },
   techContainer: {

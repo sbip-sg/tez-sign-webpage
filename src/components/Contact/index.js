@@ -1,13 +1,7 @@
-import {
-  Box,
-  Button,
-  InputBase,
-  Paper,
-  Snackbar,
-  Typography,
-} from "@mui/material";
+import { Box, Button, InputBase, Paper, Typography } from "@mui/material";
+import emailjs from "@emailjs/browser";
 import React, { useState } from "react";
-import { RiArrowRightLine, RiCloseLine } from "react-icons/ri";
+import { RiArrowRightLine } from "react-icons/ri";
 
 import Section from "../Section";
 
@@ -15,16 +9,19 @@ import { content } from "../../utils/content";
 import { NAV_ROUTES } from "../../utils/routes";
 import { styles } from "./style";
 
-const Contact = () => {
-  const [contactDetails, setContactDetails] = useState({
-    name: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    message: "",
-  });
+const INIT_DETAILS = {
+  name: "",
+  lastName: "",
+  email: "",
+  phone: "",
+  message: "",
+  website: "TezSign webpage",
+};
+
+const Contact = ({ setSnackbar }) => {
+  const [contactDetails, setContactDetails] = useState(INIT_DETAILS);
   const [isLoading, setIsLoading] = useState(false);
-  const [snackbar, setSnackbar] = useState({ message: "", isOpen: false });
+
   const [showRequired, setShowRequired] = useState(false);
   const [invalidEmail, setInvalidEmail] = useState(false);
 
@@ -54,38 +51,36 @@ const Contact = () => {
     return validate;
   };
 
-  const handleSubmitMessage = async () => {
+  const handleSubmitMessage = async (event) => {
+    event.preventDefault();
     const isEmpty = checkIsEmpty();
     const validEmail = validateEmail(contactDetails.email.trim());
 
+    console.log(contactDetails)
+    
     if (validEmail && !isEmpty) {
       setIsLoading(true);
       try {
-        // !!! to include official email for recieving message
-        const response = { status: 400 };
-        // const response = await fetch(
-        //   `${process.env.REACT_APP_BACKEND_URL}/messages`,
-        //   {
-        //     method: "post",
-        //     body: JSON.stringify(contactDetails),
-        //   }
-        // );
-        // const message = await response.text();
+        const response = await emailjs.send(
+          process.env.EMAIL_SERVICE_ID,
+          process.env.EMAIL_TEMPLATE_ID,
+          contactDetails,
+          process.env.EMAIL_PUBLIC_KEY
+        );
 
-        if (response.status === 200) {
-          setSnackbar({ message: message, isOpen: true });
-          resetForm();
-        } else {
+        setContactDetails(INIT_DETAILS);
+        setSnackbar({
+          message: "Thanks for your feedback. We will reply to you shortly.",
+          isOpen: true,
+        });
+      } catch (err) {
+        console.error(err);
+        if (err) {
           setSnackbar({
             message: "Oops... Your message was not sent. Please try again.",
             isOpen: true,
           });
         }
-      } catch (e) {
-        setSnackbar({
-          message: "Oops... Your message was not sent. Please try again.",
-          isOpen: true,
-        });
       } finally {
         setIsLoading(false);
       }
@@ -106,6 +101,7 @@ const Contact = () => {
                 onChange={handleChangeInput("name")}
                 placeholder="Name*"
                 sx={styles.inputBase}
+                value={contactDetails.name}
               />
             </Paper>
 
@@ -114,6 +110,7 @@ const Contact = () => {
                 onChange={handleChangeInput("lastName")}
                 placeholder="Last name*"
                 sx={styles.inputBase}
+                value={contactDetails.lastName}
               />
             </Paper>
           </Box>
@@ -124,6 +121,7 @@ const Contact = () => {
                 onChange={handleChangeInput("email")}
                 placeholder="Email address*"
                 sx={styles.inputBase}
+                value={contactDetails.email}
               />
             </Paper>
 
@@ -132,6 +130,7 @@ const Contact = () => {
                 onChange={handleChangeInput("phone")}
                 placeholder="Phone number"
                 sx={styles.inputBase}
+                value={contactDetails.phone}
               />
             </Paper>
           </Box>
@@ -144,6 +143,7 @@ const Contact = () => {
                 placeholder="Your message*"
                 rows={8}
                 sx={styles.inputBase}
+                value={contactDetails.message}
               />
             </Paper>
           </Box>
@@ -186,24 +186,6 @@ const Contact = () => {
             </Button>
           </Box>
         </Box>
-
-        {/* Snackbar */}
-        <Snackbar
-          action={
-            <Button
-              color="inherit"
-              sx={{ minWidth: "inherit" }}
-              onClick={() => setSnackbar({ ...snackbar, isOpen: false })}
-            >
-              <RiCloseLine size="1.4em" />
-            </Button>
-          }
-          anchorOrigin={{ vertical: "top", horizontal: "right" }}
-          open={snackbar.isOpen}
-          onClose={() => setSnackbar({ ...snackbar, isOpen: false })}
-          message={snackbar.message}
-          ContentProps={{ sx: styles.snackbar }}
-        />
       </Section>
     </Box>
   );

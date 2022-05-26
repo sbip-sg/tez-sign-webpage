@@ -32,7 +32,7 @@ const Hero = () => {
         </Fade>
       </Box>
 
-      <Slide direction="right" in={visible} timeout={300}>
+      <Slide direction="right" in={visible} timeout={800}>
         <Box sx={styles.heroBackground}>
           <Image src={background} alt={"background_image"} />
         </Box>

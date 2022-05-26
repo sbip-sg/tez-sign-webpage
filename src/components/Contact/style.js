@@ -1,18 +1,6 @@
 import { glass, theme } from "../../utils/theme";
 
 export const styles = {
-  banner: {
-    backgroundPosition: "center",
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "contain",
-    height: 350,
-    position: "absolute",
-    top: 0,
-    width: 600,
-    [theme.breakpoints.only("xs")]: {
-      height: 200,
-    },
-  },
   button: {
     borderRadius: 50,
     fontSize: theme.typography.fontSize * 1.6,
@@ -81,10 +69,5 @@ export const styles = {
   margin: {
     display: "flex",
     margin: theme.spacing(1),
-  },
-  snackbar: {
-    background: theme.palette.secondary.main,
-    boxShadow: glass.boxShadow,
-    borderRadius: `10px !important`,
   },
 };

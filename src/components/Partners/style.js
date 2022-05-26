@@ -3,8 +3,8 @@ import { bodyWidth, theme } from "../../utils/theme";
 export const styles = {
   partnersBackground: {
     position: "absolute",
-    right: -1200,
-    top: { xs: -1310, sm: -1600 },
+    right: -1000,
+    top: { xs: -1120, sm: -1400 },
     zIndex: -1,
   },
   partnersBodyContainer: {
@@ -30,13 +30,13 @@ export const styles = {
     width: "100%",
   },
   partnerIcon: {
-    backgroundColor: theme.palette.grays.white,
+    backgroundColor: "transparent",
     borderRadius: "50%",
-    height: 80,
+    height: 200,
     marginLeft: theme.spacing(4),
     marginRight: theme.spacing(4),
     marginTop: theme.spacing(4),
-    width: 80,
+    width: 200,
   },
   partnersItems: {
     alignItems: "center",

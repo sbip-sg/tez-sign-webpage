@@ -1,4 +1,4 @@
-import { Box, Slide, Typography } from "@mui/material";
+import { Box, Link, Slide, Typography } from "@mui/material";
 import Image from "next/image";
 import React from "react";
 
@@ -21,16 +21,28 @@ const Partners = () => {
 
         <Box sx={styles.partnersItems}>
           {content.partners?.items.map((item, index) => {
-            return <Box key={index} sx={styles.partnerIcon} />;
+            return (
+              <Link
+                href={item.link}
+                key={index}
+                underline="none"
+                target="_blank"
+                rel="noopener"
+              >
+                <Box sx={styles.partnerIcon}>
+                  <Image src={item.image} alt={"card_image"} />
+                </Box>
+              </Link>
+            );
           })}
         </Box>
       </Box>
 
-      <Slide direction="left" in={visible} timeout={800}>
+      {/* <Slide direction="left" in={visible} timeout={800}>
         <Box sx={styles.partnersBackground}>
           <Image src={background} alt={"background_image"} />
         </Box>
-      </Slide>
+      </Slide> */}
     </Box>
   );
 };

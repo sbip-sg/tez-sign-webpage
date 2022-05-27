@@ -1,8 +1,9 @@
 import { Box, Dialog, Slide, Typography } from "@mui/material";
 import React, { useState } from "react";
-import { RiCloseLine, RiMenuLine } from "react-icons/ri";
+import { RiArrowRightLine, RiCloseLine, RiMenuLine } from "react-icons/ri";
 
 import { NAV_ROUTES } from "../../../utils/routes";
+import Logo from "../../Logo";
 import { styles } from "./style";
 
 const Transition = React.forwardRef(function Transition(props, ref) {
@@ -32,6 +33,8 @@ const NavMenu = () => {
       >
         <Box sx={styles.dialogHeaderContainer}>
           <Box sx={styles.dialogHeader}>
+            <Logo />
+
             <Box sx={styles.grow} />
 
             <RiCloseLine onClick={() => setIsMenuOpen(false)} size="1.6em" />
@@ -46,6 +49,10 @@ const NavMenu = () => {
               onClick={handleOnClickOption(NAV_ROUTES.get(key).ID)}
             >
               {NAV_ROUTES.get(key).LABEL}
+              
+              <Box sx={styles.icon}>
+                <RiArrowRightLine />
+              </Box>
             </Typography>
           ))}
         </Box>

@@ -6,7 +6,7 @@ import { styles } from "./style";
 
 const Section = ({ children, content, header, id }) => {
   const [setRef, visible] = useInView({
-    threshold: 0.3,
+    threshold: 0.15,
   });
 
   return (

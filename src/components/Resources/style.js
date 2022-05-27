@@ -43,7 +43,7 @@ export const styles = {
   resoucesBodyContainer: {
     display: "flex",
     flexDirection: "column",
-    marginBottom: theme.spacing(1),
+    marginBottom: theme.spacing(7),
     marginTop: theme.spacing(7),
     width: "100%",
   },

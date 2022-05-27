@@ -17,13 +17,22 @@ export const styles = {
     justifyContent: "center",
   },
   dialogListContainer: {
-    display: 'flex',
-    flexDirection: 'column',
-    width: '100%'
+    display: "flex",
+    flexDirection: "column",
+    height: "50%",
+    justifyContent: "center",
+    width: "100%",
   },
   grow: {
     flexGrow: 1,
     marginLeft: "auto",
+  },
+  icon: {
+    alignItems: "center",
+    color: theme.palette.primary.main,
+    display: "flex",
+    justifyContent: "center",
+    marginLeft: theme.spacing(1),
   },
   margin: {
     display: "flex",
@@ -37,15 +46,14 @@ export const styles = {
     justifyContent: "flex-end",
   },
   navText: {
-    alignItems: 'center',
-    display: 'flex',
+    alignItems: "center",
+    display: "flex",
     color: theme.palette.grays.black,
     fontSize: theme.typography.fontSize * 2,
     fontWeight: 500,
     letterSpacing: 1.1,
     marginBottom: theme.spacing(3),
     marginLeft: theme.spacing(6),
-    textTransform: 'inherit',
-
+    textTransform: "inherit",
   },
 };

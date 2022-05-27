@@ -13,7 +13,7 @@ import { styles } from "./style";
 
 const Team = () => {
   const [setRef, visible] = useInView({
-    threshold: 0.3,
+    threshold: 0.1,
   });
 
   return (

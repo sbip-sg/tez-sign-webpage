@@ -15,7 +15,7 @@ export const styles = {
   contactBackground: {
     position: "absolute",
     right: -640,
-    top: { xs: -800, sm: -1040 },
+    top: { xs: -800, sm: -1100 },
     zIndex: -1,
   },
   contactContainer: {

@@ -5,9 +5,7 @@ import {
 } from "react-icons/ri";
 
 import blocks from "../assets/images/blocks_icon.png";
-import dummy_profile_1 from "../assets/images/dummy_profile_1.png";
-import dummy_profile_2 from "../assets/images/dummy_profile_2.png";
-import dummy_profile_3 from "../assets/images/dummy_profile_3.png";
+import empty_profile from "../assets/images/empty_profile.png";
 import eye from "../assets/images/eye_icon.png";
 import heroImage from "../assets/images/hero.png";
 import key from "../assets/images/key_icon.png";
@@ -117,17 +115,17 @@ export const content = {
     content: "",
     items: [
       {
-        image: dummy_profile_1,
+        image: empty_profile,
         header: "Cody Fisher",
         content: "Chief Executive Officer",
       },
       {
-        image: dummy_profile_2,
+        image: empty_profile,
         header: "Devon Lane",
         content: "Chief Technology Officer",
       },
       {
-        image: dummy_profile_3,
+        image: empty_profile,
         header: "Albert Flores",
         content: "Product Manager",
       },

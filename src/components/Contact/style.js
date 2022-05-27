@@ -4,6 +4,7 @@ export const styles = {
   button: {
     borderRadius: 50,
     fontSize: theme.typography.fontSize * 1.6,
+    marginTop: theme.spacing(5),
     padding: "12px 20px",
     textTransform: "none",
     width: 296,

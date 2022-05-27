@@ -150,20 +150,20 @@ export const content = {
   },
   footer: {
     socialMedia: [
-      {
-        icon: <RiTwitterFill size="1.8em" />,
-        label: "",
-        url: "",
-      },
+      // {
+      //   icon: <RiTwitterFill size="1.8em" />,
+      //   label: "",
+      //   link: "",
+      // },
       {
         icon: <RiLinkedinBoxFill size="1.8em" />,
         label: "",
-        url: "",
+        link: "https://www.linkedin.com/company/tezsign/?viewAsMember=true",
       },
       {
         icon: <RiFacebookCircleFill size="1.8em" />,
         label: "",
-        url: "",
+        link: "https://www.facebook.com/TezSign-106196855443194",
       },
     ],
     address: [

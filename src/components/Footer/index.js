@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Link, Typography } from "@mui/material";
 import React from "react";
 
 import Logo from "../../components/Logo";
@@ -11,16 +11,22 @@ const Footer = () => {
     <Box sx={styles.footerContainer}>
       <Box sx={styles.footerBodyContainer}>
         <Box sx={styles.footerHead}>
-          <Logo />
+          <Logo lightTheme />
 
           <Box sx={styles.grow} />
 
           <Box sx={styles.socialMediaContainer}>
             {content.footer?.socialMedia.map((media, index) => {
               return (
-                <Box key={index} sx={styles.socialMediaIcon}>
-                  {media?.icon}
-                </Box>
+                <Link
+                  href={media.link}
+                  key={index}
+                  underline="none"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <Box sx={styles.socialMediaIcon}>{media?.icon}</Box>
+                </Link>
               );
             })}
           </Box>
@@ -36,7 +42,9 @@ const Footer = () => {
           })}
         </Box>
 
-        <Typography sx={styles.emailText}>{content.footer.email}</Typography>
+        <Link href={`mailto:${content.footer.email}`} sx={styles.emailText}>
+          {content.footer.email}
+        </Link>
 
         <Box sx={styles.grow} />
 

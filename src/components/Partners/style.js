@@ -9,7 +9,7 @@ export const styles = {
   },
   partnersBodyContainer: {
     alignItems: "center",
-    backgroundColor: theme.palette.secondary.main,
+    backgroundColor: theme.palette.grays.white,
     display: "flex",
     flexDirection: "column",
     height: "fit-content",
@@ -45,7 +45,7 @@ export const styles = {
     justifyContent: "center",
   },
   partnersTitle: {
-    color: theme.palette.grays.white,
+    color: theme.palette.secondary.main,
     fontWeight: 700,
     letterSpacing: 1,
     lineHeight: 1.5,

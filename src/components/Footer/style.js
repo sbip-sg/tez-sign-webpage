@@ -2,17 +2,16 @@ import { bodyWidth, theme } from "../../utils/theme";
 
 export const styles = {
   addressText: {
-    color: theme.palette.secondary.main,
-    fontSize: theme.typography.fontSize * 1.6,
+    color: theme.palette.grays.white,
+    fontSize: theme.typography.fontSize * 1.4,
   },
   copyrightText: {
-    color: theme.palette.secondary.main,
+    color: theme.palette.grays.white,
   },
   emailText: {
     color: theme.palette.primary.main,
     cursor: "pointer",
     fontSize: theme.typography.fontSize * 1.2,
-    textDecoration: "underline",
     transition: "all 0.5s ease-in-out",
     "&:hover": {
       color: theme.palette.grays[400],
@@ -33,7 +32,8 @@ export const styles = {
   },
   footerContainer: {
     alignItems: "center",
-    backgroundColor: theme.palette.grays.white,
+    backgroundColor: theme.palette.secondary.main,
+    borderTop: `1px solid ${theme.palette.grays[400]}`,
     display: "flex",
     height: "100%",
     justifyContent: "center",
@@ -60,7 +60,7 @@ export const styles = {
     margin: theme.spacing(1),
   },
   socialMediaIcon: {
-    color: theme.palette.secondary.main,
+    color: theme.palette.grays.white,
     cursor: "pointer",
     marginRight: theme.spacing(2),
     transition: "all 0.5s ease-in-out",

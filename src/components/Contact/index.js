@@ -15,7 +15,7 @@ const INIT_DETAILS = {
   email: "",
   phone: "",
   message: "",
-  website: "TezSign webpage",
+  website: "Tez Sign Contact Form",
 };
 
 const Contact = ({ setSnackbar }) => {

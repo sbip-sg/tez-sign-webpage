@@ -14,6 +14,7 @@ import key from "../assets/images/key_icon.png";
 import lock from "../assets/images/lock_icon.png";
 import mobile from "../assets/images/mobile.png";
 import partners_nus from "../assets/partners/nus_logo.jpg";
+import partners_nusdbsys from "../assets/partners/nusdbsystem_logo.png";
 import partners_soc from "../assets/partners/soc_logo.jpg";
 import partners_sbip from "../assets/partners/sbip_logo.png";
 import platform from "../assets/images/platform.png";
@@ -139,13 +140,14 @@ export const content = {
   partners: {
     header: "Partners",
     items: [
-      { image: partners_nus, name: "NUS", link: "https://nus.edu.sg/" },
-      {
-        image: partners_soc,
-        name: "NUS School of Computing",
-        link: "https://www.comp.nus.edu.sg/",
-      },
+      // { image: partners_nus, name: "NUS", link: "https://nus.edu.sg/" },
+      // {
+      //   image: partners_soc,
+      //   name: "NUS School of Computing",
+      //   link: "https://www.comp.nus.edu.sg/",
+      // },
       { image: partners_sbip, name: "SBIP", link: "https://sbip.sg/" },
+      { image: partners_nusdbsys, name: "NUS DB System", link: "https://www.comp.nus.edu.sg/~dbsystem/" },
     ],
   },
   footer: {

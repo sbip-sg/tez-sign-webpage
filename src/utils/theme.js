@@ -49,7 +49,7 @@ export const appBar = {
 };
 
 export const bodyWidth = {
-  maxWidth: 1800,
+  maxWidth: 2200,
   width: "85%",
 };
 

@@ -12,6 +12,12 @@ export const styles = {
       width: "100%",
     },
   },
+  contactBackground: {
+    position: "absolute",
+    right: -640,
+    top: { xs: -800, sm: -1040 },
+    zIndex: -1,
+  },
   contactContainer: {
     alignItems: "center",
     display: "flex",

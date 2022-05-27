@@ -44,7 +44,7 @@ export const styles = {
   sectionDivider: {
     backgroundColor: theme.palette.primary.main,
     height: 4,
-    width: 80,
+    width: 120,
   },
   sectionText: {
     color: theme.palette.secondary.main,

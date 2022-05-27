@@ -15,7 +15,7 @@ const Partners = () => {
   return (
     <Box ref={setRef} sx={styles.partnersContainer}>
       <Box sx={styles.partnersBodyContainer}>
-        <Typography variant={"h3"} sx={styles.partnersTitle}>
+        <Typography sx={styles.partnersTitle}>
           {content.partners.header}
         </Typography>
 

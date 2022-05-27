@@ -1,10 +1,20 @@
-import { Box, Button, InputBase, Paper, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  InputBase,
+  Paper,
+  Slide,
+  Typography,
+} from "@mui/material";
 import emailjs from "@emailjs/browser";
+import Image from "next/image";
 import React, { useState } from "react";
 import { RiArrowRightLine } from "react-icons/ri";
 
 import Section from "../Section";
 
+import background from "../../assets/background/background_4.png";
+import { useInView } from "../../hooks/useInView";
 import { content } from "../../utils/content";
 import { NAV_ROUTES } from "../../utils/routes";
 import { styles } from "./style";
@@ -24,6 +34,10 @@ const Contact = ({ setSnackbar }) => {
 
   const [showRequired, setShowRequired] = useState(false);
   const [invalidEmail, setInvalidEmail] = useState(false);
+
+  const [setRef, visible] = useInView({
+    threshold: 0.1,
+  });
 
   const handleChangeInput = (type) => (event) => {
     setContactDetails({ ...contactDetails, [type]: event.target.value });
@@ -56,8 +70,8 @@ const Contact = ({ setSnackbar }) => {
     const isEmpty = checkIsEmpty();
     const validEmail = validateEmail(contactDetails.email.trim());
 
-    console.log(contactDetails)
-    
+    console.log(contactDetails);
+
     if (validEmail && !isEmpty) {
       setIsLoading(true);
       try {
@@ -88,7 +102,7 @@ const Contact = ({ setSnackbar }) => {
   };
 
   return (
-    <Box sx={styles.contactContainer}>
+    <Box ref={setRef} sx={styles.contactContainer}>
       <Section
         content={content.contact.content}
         header={content.contact.header}
@@ -187,6 +201,12 @@ const Contact = ({ setSnackbar }) => {
           </Box>
         </Box>
       </Section>
+
+      <Slide direction="left" in={visible} timeout={800}>
+        <Box sx={styles.contactBackground}>
+          <Image src={background} alt={"background_image"} />
+        </Box>
+      </Slide>
     </Box>
   );
 };

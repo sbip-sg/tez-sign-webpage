@@ -25,11 +25,11 @@ const Hero = () => {
           </Typography>
         </Box>
 
-        <Fade in={visible} timeout={800}>
+        <Slide direction="left" in={visible} timeout={800}>
           <Box sx={styles.heroImageContainer}>
             <Image src={content.hero.image} alt={"hero_image"} />
           </Box>
-        </Fade>
+        </Slide>
       </Box>
 
       <Slide direction="right" in={visible} timeout={800}>

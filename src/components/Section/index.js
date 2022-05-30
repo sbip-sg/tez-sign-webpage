@@ -12,9 +12,7 @@ const Section = ({ children, content, header, id }) => {
   return (
     <Box ref={setRef} component="div" id={id} sx={styles.sectionContainer}>
       <Box component="div" sx={styles.sectionBody}>
-        <Typography variant={"h3"} sx={styles.sectionTitle}>
-          {header}
-        </Typography>
+        <Typography sx={styles.sectionTitle}>{header}</Typography>
 
         <Slide direction="right" in={visible} timeout={400}>
           <Box component="div" sx={styles.sectionDivider} />

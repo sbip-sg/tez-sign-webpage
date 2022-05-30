@@ -27,7 +27,7 @@ const Hero = () => {
 
         <Slide direction="left" in={visible} timeout={800}>
           <Box sx={styles.heroImageContainer}>
-            <Image src={content.hero.image} alt={"hero_image"} />
+            <Image src={content.hero.image} alt={"hero_image"} placeholder="blur" />
           </Box>
         </Slide>
       </Box>

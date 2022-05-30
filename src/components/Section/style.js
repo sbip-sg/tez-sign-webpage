@@ -54,6 +54,7 @@ export const styles = {
   },
   sectionTitle: {
     color: theme.palette.secondary.main,
+    fontSize: {xs: '3rem', sm: '3.75rem'},
     fontWeight: 700,
     letterSpacing: 1,
     lineHeight: 1.5,

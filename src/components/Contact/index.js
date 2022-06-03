@@ -1,6 +1,7 @@
 import {
   Box,
   Button,
+  ClickAwayListener,
   InputBase,
   Paper,
   Slide,
@@ -9,7 +10,11 @@ import {
 import emailjs from "@emailjs/browser";
 import Image from "next/image";
 import React, { useState } from "react";
-import { RiArrowRightLine } from "react-icons/ri";
+import {
+  RiArrowDownSLine,
+  RiArrowRightLine,
+  RiArrowUpSLine,
+} from "react-icons/ri";
 
 import Section from "../Section";
 
@@ -24,20 +29,28 @@ const INIT_DETAILS = {
   lastName: "",
   email: "",
   phone: "",
+  purpose: "",
   message: "",
   website: "Tez Sign Contact Form",
 };
 
 const Contact = ({ setSnackbar }) => {
   const [contactDetails, setContactDetails] = useState(INIT_DETAILS);
-  const [isLoading, setIsLoading] = useState(false);
-
-  const [showRequired, setShowRequired] = useState(false);
   const [invalidEmail, setInvalidEmail] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [isSelectMenuOpen, setIsSelectMenuOpen] = useState(false);
+  const [showRequired, setShowRequired] = useState(false);
 
   const [setRef, visible] = useInView({
     threshold: 0.1,
   });
+
+  const handleSelectPurpose = (option) => () => {
+    setContactDetails({ ...contactDetails, purpose: option });
+    setInvalidEmail(false);
+    setIsSelectMenuOpen(false);
+    setShowRequired(false);
+  };
 
   const handleChangeInput = (type) => (event) => {
     setContactDetails({ ...contactDetails, [type]: event.target.value });
@@ -50,7 +63,8 @@ const Contact = ({ setSnackbar }) => {
       contactDetails.name.trim() === "" ||
       contactDetails.lastName.trim() === "" ||
       contactDetails.email.trim() === "" ||
-      contactDetails.message.trim() === ""
+      contactDetails.message.trim() === "" ||
+      contactDetails.purpose === ""
         ? true
         : false;
     setShowRequired(checker);
@@ -69,8 +83,6 @@ const Contact = ({ setSnackbar }) => {
     event.preventDefault();
     const isEmpty = checkIsEmpty();
     const validEmail = validateEmail(contactDetails.email.trim());
-
-    console.log(contactDetails);
 
     if (validEmail && !isEmpty) {
       setIsLoading(true);
@@ -109,6 +121,63 @@ const Contact = ({ setSnackbar }) => {
         id={NAV_ROUTES.get("CONTACT").ID}
       >
         <Box sx={styles.formContainer}>
+          <Box sx={styles.formRow}>
+            <Box sx={styles.selectFormContainer}>
+              <Box
+                sx={styles.selectButton}
+                onClick={() => setIsSelectMenuOpen(!isSelectMenuOpen)}
+              >
+                {contactDetails.purpose !== "" ? (
+                  <Typography sx={styles.selectFormValue}>
+                    {contactDetails.purpose}
+                  </Typography>
+                ) : (
+                  <Typography sx={styles.selectFormLabel}>
+                    What would you like to contact us about?*
+                  </Typography>
+                )}
+
+                <Box sx={styles.grow} />
+
+                {isSelectMenuOpen ? (
+                  <RiArrowUpSLine size="1.4em" />
+                ) : (
+                  <RiArrowDownSLine size="1.4em" />
+                )}
+              </Box>
+
+              {isSelectMenuOpen && (
+                <Box sx={styles.selectMenu}>
+                  <Typography sx={styles.selectMenuLabel}>
+                    Contact purpose
+                  </Typography>
+                  {content.contact.options.map((option, index) => {
+                    return (
+                      <Box
+                        sx={styles.selectOption}
+                        key={index}
+                        onClick={handleSelectPurpose(option)}
+                      >
+                        <Typography
+                          sx={
+                            (styles.selectOptionLabel,
+                            option === contactDetails.purpose
+                              ? styles.selectOptionLabelActive
+                              : "")
+                          }
+                        >
+                          {option}
+                        </Typography>
+                      </Box>
+                    );
+                  })}
+                </Box>
+              )}
+            </Box>
+          </Box>
+
+          <Box sx={styles.margin} />
+
           <Box sx={styles.formRow}>
             <Paper sx={styles.input}>
               <InputBase

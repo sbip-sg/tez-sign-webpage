@@ -133,6 +133,14 @@ export const content = {
   },
   contact: {
     header: "Contact Us",
+    content:
+      "Reach out to us on product features, demo requests, or if you just want a chat. We are also looking out for collaborators and investors.",
+    options: [
+      "Product Features",
+      "Request A Demo",
+      "Investment Opportunities",
+      "Technical Support",
+    ],
     action: "Submit",
   },
   partners: {
@@ -145,7 +153,11 @@ export const content = {
       //   link: "https://www.comp.nus.edu.sg/",
       // },
       { image: partners_sbip, name: "SBIP", link: "https://sbip.sg/" },
-      { image: partners_nusdbsys, name: "NUS DB System", link: "https://www.comp.nus.edu.sg/~dbsystem/" },
+      {
+        image: partners_nusdbsys,
+        name: "NUS DB System",
+        link: "https://www.comp.nus.edu.sg/~dbsystem/",
+      },
     ],
   },
   footer: {

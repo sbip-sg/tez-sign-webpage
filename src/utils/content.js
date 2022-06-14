@@ -116,17 +116,17 @@ export const content = {
     items: [
       {
         image: empty_profile,
-        header: "Cody Fisher",
+        header: "Dr. Who",
         content: "Chief Executive Officer",
       },
       {
         image: empty_profile,
-        header: "Devon Lane",
+        header: "Master Chief",
         content: "Chief Technology Officer",
       },
       {
         image: empty_profile,
-        header: "Albert Flores",
+        header: "Mr. Prince",
         content: "Product Manager",
       },
     ],

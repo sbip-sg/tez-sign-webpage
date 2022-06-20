@@ -5,6 +5,7 @@ import {
 } from "react-icons/ri";
 
 import blocks from "../assets/images/blocks_icon.png";
+import bulb from "../assets/images/bulb_icon.png";
 import empty_profile from "../assets/images/empty_profile.png";
 import eye from "../assets/images/eye_icon.png";
 import heroImage from "../assets/images/hero.png";
@@ -83,6 +84,12 @@ export const content = {
         header: "Interoperable Blockchains",
         content:
           "Facilitate different blockchain systems to communicate with each other, such that users from other blockchains can easily be integrated.",
+      },
+      {
+        image: bulb,
+        header: "Artificial Intelligence",
+        content:
+          "Utilize AI technologies to detect fraudulent signatures or suspicious signing actions, improving the trustiness of document signing.",
       },
     ],
   },

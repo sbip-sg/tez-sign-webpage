@@ -76,7 +76,7 @@ export default function TezSign(props) {
           property="og:description"
           content="We aim to disrupt the signing experience with the blockchain."
         />
-        <meta property="og:image" content={previewImage} />
+        <meta property="og:image" content={previewImage.src} />
         <meta name="twitter:card" content="summary" />
       </Head>
       <ThemeProvider theme={theme}>

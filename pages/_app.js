@@ -17,7 +17,9 @@
 //     <CacheProvider value={emotionCache}>
 //       <Head>
 //         <meta name="viewport" content="initial-scale=1, width=device-width" />
-{/*        <title>TezSign</title> */}
+{
+  /*        <title>TezSign</title> */
+}
 //       </Head>
 //       <ThemeProvider theme={theme}>
 //         <CssBaseline />
@@ -42,6 +44,7 @@ import Head from "next/head";
 import PropTypes from "prop-types";
 import React from "react";
 
+import previewImage from "../src/assets/meta/preview-image.png";
 import { theme } from "../src/utils/theme";
 
 export default function TezSign(props) {
@@ -58,11 +61,20 @@ export default function TezSign(props) {
   return (
     <React.Fragment>
       <Head>
+        <title>TezSign: A Digital Signing Platform for Everyone.</title>
         <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width"
         />
-        <title>TezSign</title>
+        <meta property="og:image" content={previewImage} />
+        <meta
+          property="og:title"
+          content="TezSign: A Digital Signing Platform for Everyone."
+        />
+        <meta
+          property="og:description"
+          content="We aim to disrupt the signing experience with the blockchain."
+        />
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />

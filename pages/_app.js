@@ -66,7 +66,8 @@ export default function TezSign(props) {
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width"
         />
-        <meta property="og:image" content={previewImage} />
+        <meta property="og:url" content="https://www.tezsign.com/" />
+        <meta property="og:type" content="website" />
         <meta
           property="og:title"
           content="TezSign: A Digital Signing Platform for Everyone."
@@ -75,6 +76,8 @@ export default function TezSign(props) {
           property="og:description"
           content="We aim to disrupt the signing experience with the blockchain."
         />
+        <meta property="og:image" content={previewImage} />
+        <meta name="twitter:card" content="summary" />
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />

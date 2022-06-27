@@ -44,7 +44,6 @@ import Head from "next/head";
 import PropTypes from "prop-types";
 import React from "react";
 
-import previewImage from "../src/assets/meta/preview-image.png";
 import { theme } from "../src/utils/theme";
 
 export default function TezSign(props) {
@@ -76,7 +75,7 @@ export default function TezSign(props) {
           property="og:description"
           content="We aim to disrupt the signing experience with the blockchain."
         />
-        <meta property="og:image" content={previewImage.src} />
+        <meta property="og:image" content={"https://imgur.com/a/eCw1PVn"} />
         <meta name="twitter:card" content="summary" />
       </Head>
       <ThemeProvider theme={theme}>
